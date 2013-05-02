@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body, #map_canvas
+        {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=visualization">
+    </script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/application.js"></script>
+</head>
+<body onload="initialize()">
+    <div id="map_canvas" style="width: 50%; float: left;"></div>
+    <div id="wrapper" style="width: 50%; float: left;">
+        <h3 id="shakeTitle"></h3>
+        <ul id="shakeList"></ul>
+    </div>
+
+    <select id="cmbTimePeriod">
+        <option value="0" selected="selected">HourM1</option>
+        <option value="1">HourAll</option>
+        <option value="2">DaySignificant</option>
+        <option value="3">DayM2Dot5</option>
+        <option value="4">DayM1</option>
+        <option value="5">DayAll</option>
+        <option value="6">WeekSignificant</option>
+        <option value="7">WeekM4Dot5</option>
+        <option value="8">WeekM2Dot5</option>
+        <option value="9">WeekM1</option>
+        <option value="10">MonthSignificant</option>
+        <option value="11">MonthM4Dot5</option>
+        <option value="12">MonthM2Dot5</option>
+    </select>
+</body>
+</html>
